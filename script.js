@@ -1,0 +1,1 @@
+console.log("Website Prodi Kimia berjalan dengan baik");
