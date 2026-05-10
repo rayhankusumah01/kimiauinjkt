@@ -168,7 +168,7 @@ footer{
   hight: 100%
   display:flex;
   flex-direction:coloum;
-  justify-content:center;
+  justify-content:flex-start;
 }
 
 .card:hover{
