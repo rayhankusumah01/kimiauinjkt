@@ -154,6 +154,10 @@ footer{
   color: inherit;
 }
 
+.card-link:hover {
+  text-decoration: none;
+}
+
 .card{
   background:white;
   padding:20px;
