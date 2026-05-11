@@ -1,208 +1,218 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kimia UIN Syarif Hidayatullah Jakarta</title>
 
-body{
-  font-family:Arial, sans-serif;
-  line-height:1.6;
-  background:#f4f7fb;
-}
 
-.navbar{
-  background:#0047ab;
-  color:white;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px;
-}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.navbar ul{
-  display:flex;
-  list-style:none;
-}
+  <!-- NAVBAR -->
+<header>
+  <nav class="navbar">
 
-.navbar ul li{
-  margin-left:20px;
-}
+    <div class="navbar-left">
 
-.navbar ul li a{
-  color:white;
-  text-decoration:none;
-}
+      <div class="logo-box">
+        <img src="images/logo_uinjkt_blu_besar.png" alt="Logo UIN">
+        <img src="images/logo_kimia.png" alt="Logo Kimia">
+      </div>
+    </div>
+        <button class="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="dosen.html">Dosen</a></li>
+      <li><a href="fasilitas.html">Fasilitas</a></li>
+      <li><a href="jurnal.html">Jurnal</a></li>
+      <li><a href="akreditasi.html">Akreditasi</a></li>
+      <li><a href="mahasiswa.html">Mahasiswa</a></li>
+    </ul>
 
-.hero{
-  height:90vh;
-  background:linear-gradient(rgba(0,0,0,0.5),
-  rgba(0,0,0,0.5)),
-  url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?q=80&w=1200') center/cover;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  color:white;
-}
+  </nav>
+</header>
 
-.hero-text h1{
-  font-size:60px;
-}
+<!-- HERO PROFIL -->
+<section class="profil-hero">
+  <div class="profil-hero-content">
+    <h1>Profil Program Studi Kimia</h1>
+    <p>Fakultas Sains dan Teknologi UIN Syarif Hidayatullah Jakarta</p>
+  </div>
+</section>
 
-.hero-text p{
-  margin:20px 0;
-  font-size:20px;
-}
+<!-- SEJARAH -->
+<section class="profil-section">
+  <div class="profil-container">
 
-.btn{
-  background:#00aaff;
-  color:white;
-  padding:12px 20px;
-  text-decoration:none;
-  border-radius:5px;
-}
+    <div class="section-title">
+      <span>Profil</span>
+      <h2>Sejarah Singkat</h2>
+    </div>
 
-section{
-  padding:60px 10%;
-}
+    <div class="profil-card">
+      <p>
+        Fakultas Sains dan Teknologi (FST) UIN Jakarta terbentuk tahun 2002.
+        Sejarah FST UIN Jakarta tidak bisa dilepaskan dari sejarah UIN Jakarta
+        secara keseluruhan. Perjalanan sejarah UIN Jakarta merupakan cermin dari
+        perjuangan umat Islam Indonesia untuk memiliki lembaga pendidikan tinggi
+        yang mampu menghasilkan intelektual yang profesional dan bermoral.
+      </p>
 
-h2{
-  text-align:center;
-  margin-bottom:30px;
-  color:#0047ab;
-}
+      <p>
+        Perjalanan tersebut dimulai dari berdirinya Akademi Dinas Ilmu Agama
+        (ADIA) pada tanggal 1 Juni 1957, kemudian menjadi bagian dari IAIN
+        Al-Jami’ah yang berpusat di Yogyakarta, hingga menjadi IAIN Syarif
+        Hidayatullah Jakarta dan resmi menjadi UIN Syarif Hidayatullah Jakarta
+        berdasarkan Keputusan Presiden RI Nomor 31 Tahun 2002.
+      </p>
 
-.card-container{
-  display:flex;
-  gap:20px;
-  flex-wrap:wrap;
-  justify-content:center;
-}
+      <p>
+        Program Studi Kimia berada di bawah Fakultas Sains dan Teknologi UIN
+        Syarif Hidayatullah Jakarta. Program studi ini berdiri pada tanggal
+        22 November 2001 berdasarkan SK MENDIKNAS/088796/MPN/2001.
+        Penyelenggaraan pendidikan dimulai pada tahun ajar 2002/2003 sesuai
+        dengan SK Ijin Operasional Nomor DJ.II/216/2002 tanggal 11 Juli 2002.
+      </p>
 
-.card img{
-  width:100%;
-  border-radius:10px;
-}
+      <p>
+        Program Studi Kimia bertujuan untuk mengembangkan ilmu kimia sebagai
+        disiplin ilmu yang berdiri sendiri serta terintegrasi dengan nilai-nilai
+        keislaman. Lulusan diharapkan mampu mendalami, mengembangkan, dan
+        memberikan layanan di bidang kimia secara profesional, berkualitas, dan
+        berakhlak Islami.
+      </p>
+    </div>
 
-.gallery{
-  display:flex;
-  gap:20px;
-  justify-content:center;
-  flex-wrap:wrap;
-}
+  </div>
+</section>
 
-.gallery img{
-  width:300px;
-  border-radius:10px;
-}
+<!-- MATA KULIAH -->
+<section class="course-section">
+  <div class="profil-container">
 
-footer{
-  background:#0047ab;
-  color:white;
-  text-align:center;
-  padding:20px;
-}
+    <div class="section-title">
+      <span>Akademik</span>
+      <h2>Mata Kuliah</h2>
+    </div>
 
-/* RESPONSIVE */
-@media(max-width:768px){
+    <div class="course-grid">
+      <div>Studi Islam</div>
+      <div>Bahasa Arab</div>
+      <div>Bahasa Inggris</div>
+      <div>Civic Education</div>
+      <div>Kimia Dasar</div>
+      <div>Kimia Organik Dasar</div>
+      <div>Biologi Dasar</div>
+      <div>Metode Statistik</div>
+      <div>Fisika Dasar</div>
+      <div>Kinetika Kimia</div>
+      <div>Analisis Instrumen</div>
+      <div>Kimia Lingkungan</div>
+      <div>Kalkulus</div>
+      <div>Kimia Medisinal</div>
+      <div>Biokimia Nutrisi</div>
+      <div>Proses Industri Kimia</div>
+      <div>Kimia Minyak Bumi</div>
+      <div>Metodologi Penelitian</div>
+      <div>Kimia Inti</div>
+      <div>Geokimia</div>
+      <div>Azas Teknik Kimia</div>
+    </div>
 
-  .navbar{
-    flex-direction:column;
-  }
+  </div>
+</section>
 
-  .navbar ul{
-    margin-top:10px;
-    flex-direction:column;
-    text-align:center;
-  }
+<!-- VISI MISI -->
+<section class="visi-misi-section">
+  <div class="profil-container">
 
-  .navbar ul li{
-    margin:10px 0;
-  }
+    <div class="section-title">
+      <span>Arah Pengembangan</span>
+      <h2>Visi, Misi, & Tujuan</h2>
+    </div>
 
-  .hero-text h1{
-    font-size:40px;
-  }
+    <div class="visi-card">
+      <h3>Visi</h3>
+      <p>
+        Menjadi Program Studi Kimia yang unggul di tingkat regional, nasional,
+        dan internasional, yang mampu mengintegrasikan ilmu kimia dengan
+        berpedoman pada nilai-nilai Islam dan keindonesiaan.
+      </p>
+    </div>
 
-}
-.logo-area{
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
+    <div class="misi-grid">
+      <div class="misi-card">
+        <h3>01</h3>
+        <p>Menyelenggarakan sistem pendidikan tinggi yang menjamin pembelajaran kimia berbasis KKNI.</p>
+      </div>
 
-.logo-area img{
-  width: 40px;
-  height: 40px;
-  object-fit:cover;
-}
+      <div class="misi-card">
+        <h3>02</h3>
+        <p>Memperluas dan mengembangkan ilmu kimia melalui kegiatan penelitian fundamental dan terapan.</p>
+      </div>
 
-.dosen{
-  padding:60px 20px;
-}
+      <div class="misi-card">
+        <h3>03</h3>
+        <p>Memberikan kontribusi nyata terhadap peningkatan kualitas hidup masyarakat melalui penerapan ilmu kimia.</p>
+      </div>
 
-.dosen-container{
-  display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap:20px;
-  align-items: stretch;
-}
+      <div class="misi-card">
+        <h3>04</h3>
+        <p>Membekali peserta didik dengan pengetahuan, sikap, dan keterampilan kimia yang terintegrasi dengan nilai Islam.</p>
+      </div>
+    </div>
 
-.card-link {
-  text-decoration: none;
-  display: flex;
-  color: inherit;
-}
+  </div>
+</section>
 
-.card-link:hover {
-  text-decoration: none;
-}
+<!-- KURIKULUM -->
+<section class="kurikulum-section">
+  <div class="profil-container">
 
-.card{
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  box-shadow:0 4px 10px rgba(0,0,0,0.1);
-  transition:0.3s;
-  width: 200px
-  hight: 100%
-  display:flex;
-  flex-direction:coloum;
-  justify-content:flex-start;
-}
+    <div class="section-title">
+      <span>Akademik</span>
+      <h2>Kurikulum Program Studi</h2>
+    </div>
 
-.card:hover{
-  transform:translateY(-5px);
-}
+    <div class="kurikulum-card">
 
-.card h3{
-  margin-bottom:10px;
-  color:#0f172a;
-}
+      <div class="kurikulum-icon">
+        <i class="fa-solid fa-file-pdf"></i>
+      </div>
 
-.card p{
-  color:#475569;
-}
+      <div class="kurikulum-content">
+        <h3>Dokumen Kurikulum Program Studi Kimia</h3>
 
-.akreditasi-links{
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  align-items:center;
-  margin-top:20px;
-}
+        <p>
+          Kurikulum Program Studi Kimia disusun untuk mendukung pembelajaran
+          yang terstruktur, berbasis capaian pembelajaran, serta terintegrasi
+          dengan nilai keislaman dan keindonesiaan.
+        </p>
 
-.akreditasi-links a{
-  background:#0047ab;
-  color:white;
-  padding:10px 15px;
-  border-radius:8px;
-  text-decoration:none;
-  transition:0.3s;
-  width:300px;
-  text-align:center;
-}
+        <a href="file/Module Handbook Chemistry.pdf" target="_blank" class="btn-kurikulum">
+          <i class="fa-solid fa-download"></i>
+          Lihat / Unduh Kurikulum
+        </a>
+      </div>
 
-.akreditasi-links a:hover{
-  background:#002f6c;
-}
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Program Studi Kimia UIN Syarif Hidayatullah Jakarta</p>
+</footer>
+
+ <script src="script.js"></script>
+</body>
+</html>
