@@ -1,0 +1,983 @@
+/* ===================== RESET ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f4f7fb;
+  color: #1e293b;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  background: #2f6396;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo-box {
+  background: rgba(122, 231, 250, 0.616);
+  width: 160px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+  position: relative;
+  top: 5px;
+  border: 1px solid #2f6396;
+}
+
+.logo-box img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+/* NAV LINKS */
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: opacity 0.2s;
+}
+
+.navbar ul li a:hover {
+  opacity: 0.8;
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+/* HAMBURGER ACTIVE STATE */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ===================== HERO (INDEX) ===================== */
+.hero {
+  min-height: 85vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1532187643603-ba119ca4109e?q=80&w=1200') center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.hero-text h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  margin: 0 auto 25px;
+  font-size: 18px;
+  max-width: 600px;
+}
+
+.btn {
+  background: #00aaff;
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0088cc;
+}
+
+/* ===================== SECTION GENERICS ===================== */
+section {
+  padding: 60px 10%;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0047ab;
+}
+
+/* SECTION TITLE */
+.section-title {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title span {
+  color: #0b4fae;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.section-title h2 {
+  font-size: 36px;
+  margin-top: 10px;
+  color: #0f172a;
+}
+
+/* ===================== KONTAK ===================== */
+.kontak {
+  background: #f4fbff;
+  padding: 70px 8%;
+}
+
+.kontak-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.kontak h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #111;
+  text-align: left;
+}
+
+.kontak-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.kontak-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  border: 4px solid #2f6396;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #2f6396;
+  font-size: 22px;
+}
+
+.kontak-item p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+.kontak-item h4 {
+  font-size: 15px;
+  color: #000;
+  line-height: 1.5;
+}
+
+.sosmed {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sosmed a {
+  width: 36px;
+  height: 36px;
+  background: #2f6396;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.sosmed a:hover {
+  background: #1f4f7a;
+}
+
+.kontak iframe {
+  border-radius: 8px;
+  display: block;
+  width: 100%;
+}
+
+/* ===================== DOSEN ===================== */
+.judul-dosen {
+  background-color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.judul-dosen h2 {
+  font-size: 36px;
+  color: #0b4fae;
+  font-weight: bold;
+  margin: 0;
+}
+
+.dosen {
+  padding: 40px 20px;
+}
+
+.dosen-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  color: #0f172a;
+  font-size: 16px;
+}
+
+.card p {
+  color: #475569;
+  font-size: 14px;
+}
+
+.foto-dosen {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.email {
+  font-size: 13px !important;
+  word-break: break-all;
+}
+
+/* ===================== PROFIL ===================== */
+.profil-hero {
+  background: linear-gradient(rgba(9, 64, 128, 0.85), rgba(9, 64, 128, 0.85)),
+              url("images/bg-kampus.jpg") center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.profil-hero h1 { font-size: 44px; margin-bottom: 10px; }
+.profil-hero p  { font-size: 18px; }
+
+.profil-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.profil-card {
+  background: white;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.profil-card p { margin-bottom: 16px; }
+
+.course-section { background: white; }
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.course-grid div {
+  background: #f1f5f9;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  color: #0f172a;
+  transition: all 0.3s;
+}
+
+.course-grid div:hover {
+  background: #0b4fae;
+  color: white;
+  transform: translateY(-4px);
+}
+
+.visi-misi-section { background: #f4f7fb; }
+
+.visi-card {
+  background: linear-gradient(135deg, #0b4fae, #1d8cf8);
+  color: white;
+  padding: 35px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.visi-card h3 { font-size: 28px; margin-bottom: 12px; }
+.visi-card p  { font-size: 17px; line-height: 1.7; }
+
+.misi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.misi-card {
+  background: white;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.misi-card:hover { transform: translateY(-5px); }
+.misi-card h3 { color: #0b4fae; font-size: 32px; margin-bottom: 8px; }
+.misi-card p  { line-height: 1.7; }
+
+.kurikulum-section { background: white; }
+
+.kurikulum-card {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background: linear-gradient(135deg, #0b4fae, #1d8cf8);
+  color: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.kurikulum-icon {
+  width: 110px;
+  height: 110px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.15);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kurikulum-icon i { font-size: 52px; }
+.kurikulum-content h3 { font-size: 26px; margin-bottom: 12px; }
+.kurikulum-content p  { line-height: 1.8; margin-bottom: 22px; }
+
+.btn-kurikulum {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: #0b4fae;
+  padding: 13px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-kurikulum:hover {
+  transform: translateY(-3px);
+  background: #eaf2ff;
+}
+
+/* ===================== FASILITAS ===================== */
+.fasilitas-hero {
+  background: linear-gradient(rgba(9, 64, 128, 0.85), rgba(9, 64, 128, 0.85)),
+              url("images/bg-lab.jpg") center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.fasilitas-hero h1 { font-size: 44px; margin-bottom: 10px; }
+.fasilitas-hero p  { font-size: 18px; }
+
+.fasilitas-container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.fasilitas-intro { background: #f4f7fb; }
+
+.intro-card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  line-height: 1.8;
+  text-align: justify;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.intro-card p { margin-bottom: 14px; }
+
+.lab-section { background: white; }
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.lab-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.09);
+  transition: all 0.3s;
+}
+
+.lab-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.15);
+}
+
+.lab-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.lab-content {
+  padding: 22px;
+  text-align: center;
+}
+
+.lab-content i { font-size: 32px; color: #0b4fae; margin-bottom: 12px; }
+.lab-content h3 { font-size: 19px; color: #0f172a; margin-bottom: 10px; }
+.lab-content p  { color: #475569; line-height: 1.6; font-size: 14px; }
+
+/* ===================== AKREDITASI ===================== */
+.akreditasi-hero {
+  background: linear-gradient(rgba(9,64,128,0.85), rgba(9,64,128,0.85)),
+              url("images/bg-akreditasi.jpg") center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+}
+
+.akreditasi-hero h1 { font-size: 44px; margin-bottom: 10px; }
+.akreditasi-hero p  { font-size: 18px; }
+
+.akreditasi-container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.akreditasi-intro { background: #f4f7fb; }
+
+.intro-akreditasi-card {
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  line-height: 1.8;
+  text-align: justify;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.asiin-section { background: white; }
+
+.asiin-card {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  background: linear-gradient(135deg, #0b4fae, #1d8cf8);
+  color: white;
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.asiin-left i { font-size: 80px; }
+
+.asiin-right h2 { font-size: 32px; margin-bottom: 14px; }
+.asiin-right p  { line-height: 1.8; margin-bottom: 22px; }
+
+.btn-akreditasi {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  color: #0b4fae;
+  padding: 13px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-akreditasi:hover { transform: translateY(-3px); }
+
+.dokumen-section { background: #f4f7fb; }
+
+.dokumen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.dokumen-card {
+  background: white;
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+}
+
+.dokumen-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+}
+
+.dokumen-icon {
+  width: 65px;
+  height: 65px;
+  background: #eaf2ff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.dokumen-icon i { font-size: 28px; color: #0b4fae; }
+
+.dokumen-content h3 { font-size: 18px; margin-bottom: 8px; color: #0f172a; }
+.dokumen-content p  { color: #64748b; margin-bottom: 18px; }
+
+.dokumen-content a {
+  display: inline-block;
+  background: #0b4fae;
+  color: white;
+  padding: 11px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.dokumen-content a:hover { background: #083b82; }
+
+/* ===================== JURNAL ===================== */
+.jurnal-hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(rgba(9,64,128,0.88), rgba(9,64,128,0.88)),
+              url("images/bg-jurnal.jpg") center/cover;
+  text-align: center;
+}
+
+.jurnal-content {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  padding: 50px 40px;
+  border-radius: 26px;
+  max-width: 660px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+}
+
+.jurnal-icon {
+  width: 90px;
+  height: 90px;
+  margin: auto auto 22px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jurnal-icon i { font-size: 38px; color: white; }
+.jurnal-content h1 { font-size: 38px; margin-bottom: 16px; font-weight: 800; }
+.jurnal-content p  { font-size: 17px; line-height: 1.8; margin-bottom: 30px; color: #e2e8f0; }
+
+.btn-jurnal {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  color: #0b4fae;
+  padding: 15px 26px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.btn-jurnal:hover {
+  transform: translateY(-4px);
+  background: #eaf2ff;
+}
+
+/* ===================== MAHASISWA ===================== */
+.mahasiswa-hero {
+  background: linear-gradient(rgba(9,64,128,0.85), rgba(9,64,128,0.85)),
+              url("images/bg-mahasiswa.jpg") center/cover;
+  padding: 90px 20px;
+  text-align: center;
+  color: white;
+}
+
+.mahasiswa-hero h1 { font-size: 44px; margin-bottom: 10px; }
+.mahasiswa-hero p  { font-size: 18px; }
+
+.mahasiswa-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.mahasiswa-intro { background: #f4f7fb; }
+
+.intro-mahasiswa-card {
+  background: white;
+  padding: 35px;
+  border-radius: 22px;
+  line-height: 1.9;
+  text-align: justify;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.organisasi-section { background: white; }
+
+.organisasi-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.organisasi-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.organisasi-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.14);
+}
+
+.organisasi-content {
+  padding: 40px 30px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.organisasi-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  background: #eaf2ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #0b4fae;
+}
+
+.organisasi-content h3 { font-size: 22px; margin-bottom: 14px; color: #0f172a; }
+.organisasi-content p  { color: #475569; line-height: 1.8; margin-bottom: 22px; }
+
+.btn-organisasi {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #0b4fae;
+  color: white;
+  padding: 13px 22px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-organisasi:hover {
+  background: #083b82;
+  transform: translateY(-3px);
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  background: #0047ab;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ===================== AKREDITASI LINKS (lama) ===================== */
+.akreditasi-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.akreditasi-links a {
+  background: #0047ab;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+  width: 300px;
+  text-align: center;
+}
+
+.akreditasi-links a:hover { background: #002f6c; }
+
+/* ===================== RESPONSIVE ===================== */
+
+/* TABLET (≤ 960px) */
+@media (max-width: 960px) {
+
+  .navbar {
+    height: 70px;
+    padding: 0 24px;
+  }
+
+  .logo-box {
+    width: 130px;
+    height: 76px;
+  }
+
+  .logo-box img {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Show hamburger, hide nav links */
+  .hamburger { display: flex; }
+
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #2f6396;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 10px 0 20px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  }
+
+  .navbar ul.open { display: flex; }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar ul li a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Grids → 2 kolom */
+  .dosen-container       { grid-template-columns: repeat(2, 1fr); margin: 0; }
+  .course-grid           { grid-template-columns: repeat(2, 1fr); }
+  .lab-grid              { grid-template-columns: repeat(2, 1fr); }
+  .dokumen-grid          { grid-template-columns: repeat(2, 1fr); }
+  .misi-grid             { grid-template-columns: repeat(2, 1fr); }
+  .organisasi-grid       { grid-template-columns: repeat(2, 1fr); }
+
+  /* ASIIN & Kurikulum card jadi kolom */
+  .asiin-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .kurikulum-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Kontak stack */
+  .kontak-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* Hero font sizes */
+  .hero-text h1    { font-size: 38px; }
+  .profil-hero h1,
+  .fasilitas-hero h1,
+  .akreditasi-hero h1,
+  .mahasiswa-hero h1 { font-size: 36px; }
+  .judul-dosen h2  { font-size: 32px; }
+  .jurnal-content h1 { font-size: 32px; }
+}
+
+/* MOBILE (≤ 600px) */
+@media (max-width: 600px) {
+
+  .navbar { height: 65px; padding: 0 16px; }
+
+  .navbar ul { top: 65px; }
+
+  .logo-box {
+    width: 110px;
+    height: 66px;
+    gap: 7px;
+  }
+
+  .logo-box img { width: 36px; height: 36px; }
+
+  /* Single column grids */
+  .dosen-container   { grid-template-columns: 1fr; padding: 0; }
+  .course-grid       { grid-template-columns: 1fr; }
+  .lab-grid          { grid-template-columns: 1fr; }
+  .dokumen-grid      { grid-template-columns: 1fr; }
+  .misi-grid         { grid-template-columns: 1fr; }
+  .organisasi-grid   { grid-template-columns: 1fr; }
+
+  /* Sections padding */
+  section { padding: 40px 16px; }
+  .profil-container,
+  .fasilitas-container,
+  .akreditasi-container,
+  .mahasiswa-container { padding: 40px 16px; }
+
+  .kontak { padding: 50px 16px; }
+
+  /* Hero */
+  .hero-text h1 { font-size: 28px; }
+  .hero-text p  { font-size: 15px; }
+
+  .profil-hero h1,
+  .fasilitas-hero h1,
+  .akreditasi-hero h1,
+  .mahasiswa-hero h1 { font-size: 26px; }
+
+  .profil-hero p,
+  .fasilitas-hero p,
+  .akreditasi-hero p,
+  .mahasiswa-hero p { font-size: 15px; }
+
+  .profil-hero,
+  .fasilitas-hero,
+  .akreditasi-hero  { padding: 60px 16px; }
+  .mahasiswa-hero   { padding: 70px 16px; }
+
+  .jurnal-content {
+    padding: 35px 20px;
+  }
+
+  .jurnal-content h1 { font-size: 26px; }
+  .jurnal-content p  { font-size: 15px; }
+
+  .judul-dosen h2 { font-size: 24px; }
+
+  /* Section title */
+  .section-title h2 { font-size: 26px; }
+
+  /* Cards padding */
+  .profil-card,
+  .intro-card,
+  .intro-akreditasi-card,
+  .intro-mahasiswa-card { padding: 22px; }
+
+  /* ASIIN */
+  .asiin-left i    { font-size: 60px; }
+  .asiin-right h2  { font-size: 24px; }
+  .asiin-card      { padding: 28px 20px; }
+
+  /* Kurikulum */
+  .kurikulum-card  { padding: 28px 20px; }
+  .kurikulum-icon  { width: 80px; height: 80px; }
+  .kurikulum-icon i { font-size: 38px; }
+  .kurikulum-content h3 { font-size: 22px; }
+
+  /* Visi */
+  .visi-card { padding: 25px; }
+  .visi-card h3 { font-size: 24px; }
+
+  /* Kontak */
+  .kontak h2 { font-size: 22px; text-align: center; }
+  .kontak-icon { width: 48px; height: 48px; font-size: 18px; }
+  .kontak-item p { font-size: 14px; }
+  .kontak-item h4 { font-size: 13px; }
+
+  /* Organisasi */
+  .organisasi-content h3 { font-size: 20px; }
+}
